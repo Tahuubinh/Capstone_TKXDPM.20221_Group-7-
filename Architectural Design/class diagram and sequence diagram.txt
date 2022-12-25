@@ -1,1 +1,2 @@
-class diagram and sequence diagram của các use case lưu ở folder này
+class diagram and sequence diagram của các use case lưu ở folder này (tuần 1)
+analysis class (lớp phân tích) làm ở tuần 2
