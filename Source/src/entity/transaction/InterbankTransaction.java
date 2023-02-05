@@ -2,6 +2,7 @@ package entity.transaction;
 
 import java.time.LocalDateTime;
 import entity.card.CreditCard;
+import util.TimeManager;
 
 public class InterbankTransaction {
 
@@ -21,7 +22,6 @@ public class InterbankTransaction {
 	private String command;
 
 	// transaction content
-
 	private String transactionContent;
 
 	// amount of transaction
@@ -40,7 +40,7 @@ public class InterbankTransaction {
 	 * @param _createdAt
 	 */
 	public InterbankTransaction(CreditCard _card, String _command, String _content, int _amount,
-			LocalDateTime _createdAt) {
+			String _createdAt) {
 		this.setCardNumber(_card.getCardNumber());
 		this.setOwner(_card.getOwner());
 		this.setCvv(_card.getCVV());
@@ -48,15 +48,7 @@ public class InterbankTransaction {
 		this.setCommand(_command);
 		this.setTransactionContent(_content);
 		this.setAmount(_amount);
-		this.setCreatedAt(_createdAt);
-	}
-
-	public String getCardNumber() {
-		return cardNumber;
-	}
-
-	public double getAmount() {
-		return amount;
+		this.setCreatedAt(LocalDateTime.parse(_createdAt, TimeManager.formatDayTime));
 	}
 
 	public void setCardNumber(String _cardNumber) {
@@ -91,6 +83,10 @@ public class InterbankTransaction {
 		this.createdAt = _createdAt;
 	}
 
+	public String getCardNumber() {
+		return cardNumber;
+	}
+	
 	public String getOwner() {
 		return owner;
 	}
@@ -109,6 +105,10 @@ public class InterbankTransaction {
 
 	public String getTransactionContent() {
 		return transactionContent;
+	}
+
+	public double getAmount() {
+		return amount;
 	}
 
 	public LocalDateTime getCreatedAt() {

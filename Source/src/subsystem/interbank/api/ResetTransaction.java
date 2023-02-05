@@ -16,7 +16,7 @@ public class ResetTransaction implements Message {
 	@Override
 	public String pack() {
 		JsonObject sentJson = new JsonObject();
-		sentJson.addProperty("cardCode", card.getCardCode());
+		sentJson.addProperty("cardCode", card.getCardNumber());
 		sentJson.addProperty("owner", card.getOwner());
 		sentJson.addProperty("cvvCode", card.getCVV());
 		sentJson.addProperty("dateExpired", card.getExpiredDate());
