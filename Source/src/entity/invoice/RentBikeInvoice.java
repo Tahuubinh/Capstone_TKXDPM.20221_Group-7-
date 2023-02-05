@@ -138,9 +138,9 @@ public class RentBikeInvoice {
 		RentBikeInvoiceDAO.save(bikeCode, rentalCode, type, rentTime, returnTime, rentCost, owner, deposit);
 	}
 
-	public void updateAfterReturnBike(String returnTime, int rentCost) {
-		this.returnTime = returnTime;
-		this.rentCost = rentCost;
+	public void updateAfterReturnBike(String _returnTime, int _rentCost) {
+		this.returnTime = _returnTime;
+		this.rentCost = _rentCost;
 		RentBikeInvoiceDAO.updateAfterReturnBike(rentalCode, rentCost, returnTime);
 	}
 }

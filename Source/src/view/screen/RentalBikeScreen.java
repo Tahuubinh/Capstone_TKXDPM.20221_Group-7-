@@ -38,7 +38,7 @@ public class RentalBikeScreen {
 		// Query invoice and rental bike from rental code
 		RentBikeInvoice rentBikeInvoice = RentBikeController.getRentBikeInvoice(rentalCode);
 		Bike bike = DockController.getBikeFromID(rentBikeInvoice.getBikeCode());
-		String bikeType = bike.getType();
+		String bikeType = bike.getBikeType().name();
 
 		// Initialize for time
 		Calendar calendar = Calendar.getInstance();

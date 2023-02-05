@@ -14,6 +14,7 @@ public class Constants {
 	public final static String RENT_BIKE_INVOICE = "/view/fxml/RentBikeInvoiceScreen.fxml";
 	public final static String RETURN_BIKE = "/view/fxml/ReturnBikeScreen.fxml";
 	public final static String RENTAL_BIKE = "/view/fxml/RentalBikeScreen.fxml";
+	public final static String ACCOUNT = "/view/fxml/Remain.fxml";
 
 	public final static String PAY = "pay";
 	public final static String REFUND = "refund";

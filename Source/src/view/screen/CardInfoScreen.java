@@ -31,7 +31,7 @@ public class CardInfoScreen implements Initializable {
 	 * some text field on screen
 	 */
 	@FXML
-	private TextField cardCode, owner, ccvCode, expDate;
+	private TextField cardNumber, owner, ccvCode, expDate;
 
 	/**
 	 * some buttons
@@ -44,7 +44,7 @@ public class CardInfoScreen implements Initializable {
 	 */
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
-		cardCode.setText(card.getCardCode());
+		cardNumber.setText(card.getCardNumber());
 		owner.setText(card.getOwner());
 		ccvCode.setText(card.getCVV());
 		expDate.setText(card.getExpiredDate());
@@ -57,17 +57,17 @@ public class CardInfoScreen implements Initializable {
 	 */
 	public void processRentBike(Bike bike, Stage cardInfoStage) {
 		confirmButton.setOnAction(e -> {
-			if (cardCode.getText().length() > 4) NotificationBox.display("Notification", "Invalid Transaction: EROOR: Invalid Card!");
-			else if (cardCode.getText().isEmpty() || owner.getText().isEmpty() || ccvCode.getText().isEmpty()
+			if (cardNumber.getText().length() > 4) NotificationBox.display("Notification", "Invalid Transaction: EROOR: Invalid Card!");
+			else if (cardNumber.getText().isEmpty() || owner.getText().isEmpty() || ccvCode.getText().isEmpty()
 					|| expDate.getText().isEmpty()) {
 				NotificationBox.display("Notification", "Please fill in all information!");
 			} else {
-				if (!CardController.validateCardInfo(cardCode.getText(), owner.getText(), ccvCode.getText(),
+				if (!CardController.validateCardInfo(cardNumber.getText(), owner.getText(), ccvCode.getText(),
 						expDate.getText())) {
 					NotificationBox.display("Notification", "Information entered isn't in right format!");
 					HandleException.getException(Constants.INVALID_CARD_INFO);
 				} else {
-					card = new CreditCard(cardCode.getText(), owner.getText(), ccvCode.getText(), expDate.getText());
+					card = new CreditCard(cardNumber.getText(), owner.getText(), ccvCode.getText(), expDate.getText());
 					try {
 						@SuppressWarnings("unused")
 						String respondCode = RentBikeController.processRentBike(card, bike);
