@@ -6,7 +6,7 @@ import org.json.JSONObject;
 
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
+
 public class HTTPBinder {
 
 	private final OkHttpClient client = new OkHttpClient.Builder().connectTimeout(10000, TimeUnit.MILLISECONDS)

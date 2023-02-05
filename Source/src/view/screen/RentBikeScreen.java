@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import controller.BarcodeController;
 import controller.RentBikeController;
-import entity.Bike;
+import entity.bike.Bike;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

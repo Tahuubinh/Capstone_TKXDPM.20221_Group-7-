@@ -6,8 +6,8 @@ import java.util.ResourceBundle;
 
 import controller.CardController;
 import controller.RentBikeController;
-import entity.Bike;
-import entity.CreditCard;
+import entity.bike.Bike;
+import entity.card.CreditCard;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

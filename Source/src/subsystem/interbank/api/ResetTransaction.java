@@ -2,7 +2,7 @@ package subsystem.interbank.api;
 
 import com.google.gson.JsonObject;
 
-import entity.CreditCard;
+import entity.card.CreditCard;
 import util.HTTPBinder;
 
 public class ResetTransaction implements Message {

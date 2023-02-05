@@ -3,8 +3,8 @@ package view.screen;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import entity.Bike;
-import entity.Dock;
+import entity.bike.Bike;
+import entity.dock.Dock;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

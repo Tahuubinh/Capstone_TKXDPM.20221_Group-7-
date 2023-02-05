@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import controller.ReturnBikeController;
-import entity.CreditCard;
-import entity.Dock;
-import entity.RentBikeInvoice;
+import entity.card.CreditCard;
+import entity.dock.Dock;
+import entity.invoice.RentBikeInvoice;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

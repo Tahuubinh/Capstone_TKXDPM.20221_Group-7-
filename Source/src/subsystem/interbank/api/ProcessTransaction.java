@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import entity.CreditCard;
-import entity.InterbankTransaction;
+import entity.card.CreditCard;
+import entity.transaction.InterbankTransaction;
 import util.Constants;
 import util.HTTPBinder;
 import util.HashFunction;

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import entity.InterbankTransaction;
+import entity.transaction.InterbankTransaction;
 
 public class HashFunction {
 

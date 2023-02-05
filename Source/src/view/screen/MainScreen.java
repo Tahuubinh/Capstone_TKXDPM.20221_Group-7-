@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 
 import controller.DockController;
 import controller.RentBikeController;
-import entity.Dock;
+import entity.dock.Dock;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

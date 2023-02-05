@@ -9,9 +9,9 @@ import java.util.Date;
 
 import controller.DockController;
 import controller.RentBikeController;
-import entity.Bike;
-import entity.RentBikeInvoice;
-import entity.SingleElectricBike;
+import entity.bike.Bike;
+import entity.invoice.RentBikeInvoice;
+import entity.bike.SingleElectricBike;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

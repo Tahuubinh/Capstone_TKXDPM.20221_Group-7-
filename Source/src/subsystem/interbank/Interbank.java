@@ -1,6 +1,6 @@
 package subsystem.interbank;
 
-import entity.CreditCard;
+import entity.card.CreditCard;
 import subsystem.interbank.api.ProcessTransaction;
 import subsystem.interbank.api.ResetTransaction;
 

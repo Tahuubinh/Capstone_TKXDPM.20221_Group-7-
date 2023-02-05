@@ -2,7 +2,7 @@ package view.screen;
 
 import java.io.IOException;
 
-import entity.RentBikeInvoice;
+import entity.invoice.RentBikeInvoice;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -1,6 +1,6 @@
 package subsystem.interbank;
 
-import entity.CreditCard;
+import entity.card.CreditCard;
 
 public interface IInterbank {
 

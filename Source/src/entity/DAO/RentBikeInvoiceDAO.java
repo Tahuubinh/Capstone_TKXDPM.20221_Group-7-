@@ -1,4 +1,4 @@
-package entity.data;
+package entity.DAO;
 
 import java.util.ArrayList;
 
