@@ -2,6 +2,7 @@ package entity.dock;
 
 import java.util.ArrayList;
 import entity.bike.Bike;
+import entity.DAO.DockDAO;;
 
 public class Dock {
 
@@ -90,6 +91,29 @@ public class Dock {
 	}
 
 	/**
+	 * @param bikeInfo: as a String
+	 * @return Bike in this dock
+	 */
+	public Bike getBikeFromString(String _bikeInfo) {
+		for (Bike bike : this.getBikes()) {
+			String str = bike.getGeneralInfo();
+			if (_bikeInfo.equals(str)) {
+				return bike;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * string convertion
+	 */
+	@Override
+	public String toString() {
+		return String.format("Name: %s, available spots: %s, address: %s", name,
+				Integer.toString(this.getNumberOfDockingPoints() - this.getNumberOfBikesNotInUse()), address);
+	}
+
+	/**
 	 * @param _bikeID: bike ID (int)
 	 * @return Bike in this dock
 	 */
@@ -123,4 +147,18 @@ public class Dock {
 		return result;
 	}
 
+	/**
+	 * @return table of all docks
+	 */
+	public static ArrayList<ArrayList<String>> getDockTable() {
+		return DockDAO.getAllDocks();
+	}
+
+	/**
+	 * @param dockID: dock id want to change
+	 * @param difference: difference, e.g. +1, -1, ...
+	 */
+	public static void updateRemainCapacity(String _dockID, String _difference) {
+		DockDAO.updateRemainCapacity(_dockID, _difference);
+	}
 }

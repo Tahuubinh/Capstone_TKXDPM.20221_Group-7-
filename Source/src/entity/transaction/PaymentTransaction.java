@@ -1,5 +1,8 @@
 package entity.transaction;
 
+import entity.DAO.PaymentTransactionDAO;
+import util.TimeManager;
+
 import java.time.LocalDateTime;
 import entity.card.CreditCard;
 
@@ -43,4 +46,10 @@ public class PaymentTransaction {
 		this.daytime = _daytime;
 	}
 
+	/**
+	 * save payment transaction in database
+	 */
+	public void savePaymentTransaction() {
+		PaymentTransactionDAO.save(rentalCode, cardNumber, owner, transactionContent, amount, daytime.format(TimeManager.formatDayTime));
+	}
 }

@@ -21,10 +21,6 @@ import util.Constants;
 import util.HandleException;
 import view.screen.box.NotificationBox;
 
-/**
- * @author longld
- *
- */
 public class CardInfoScreen implements Initializable {
 	/**
 	 * card

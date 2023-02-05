@@ -15,10 +15,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import util.Constants;
 
-/**
- * @author longld
- *
- */
 public class DockListScreen {
 	public static boolean reset = false;
 	ArrayList<Dock> docks;

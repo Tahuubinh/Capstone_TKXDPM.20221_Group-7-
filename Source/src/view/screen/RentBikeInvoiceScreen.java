@@ -13,10 +13,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import util.Constants;
 
-/**
- * @author duydc
- *
- */
 public class RentBikeInvoiceScreen {
 	@FXML
 	private Label rentalCode, bikeCode, type, owner, rentTime, returnTime, deposit, rentCost;

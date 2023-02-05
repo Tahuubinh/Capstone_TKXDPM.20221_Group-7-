@@ -9,6 +9,8 @@ import entity.DAO.RentBikeInvoiceDAO;
 import subsystem.interbank.IInterbank;
 import subsystem.interbank.Interbank;
 import util.*;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
@@ -43,14 +45,13 @@ public class RentBikeController {
 
 	private static void updateRentBikeStatus(CreditCard _card, Bike _bike, int _amount, LocalDateTime _rentStamp,
 			String _returnStamp) {
-		RentBikeInvoice rentBikeInvoice = new RentBikeInvoice(rentalCode, _bike.getBikeID(), _bike.getType().name(),
+		RentBikeInvoice rentBikeInvoice = new RentBikeInvoice(rentalCode, _bike.getBikeID(), _bike.getBikeType().name(),
 				_card.getOwner(), _rentStamp.format(TimeManager.formatDayTime), _amount);
 
 		rentBikeInvoice.saveRentBikeInvoice();
 
 		PaymentTransaction paymentTransaction = new PaymentTransaction(rentalCode, _card.getCardNumber(),
-				_card.getOwner(),
-				Constants.RENT_MESSAGE, _amount, _rentStamp.format(TimeManager.formatDayTime));
+				_card.getOwner(), Constants.RENT_MESSAGE, _amount, _rentStamp);
 		paymentTransaction.savePaymentTransaction();
 
 		_bike.updateStatus(true, _bike.getDockID());

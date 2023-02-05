@@ -3,7 +3,11 @@ package controller;
 import subsystem.interbank.IInterbank;
 import subsystem.interbank.Interbank;
 import util.*;
-import entity.*;
+import entity.invoice.*;
+import entity.bike.*;
+import entity.card.*;
+import entity.dock.*;
+import entity.transaction.*;
 import javafx.util.Pair;
 
 import java.time.LocalDateTime;
@@ -33,18 +37,18 @@ public class ReturnBikeController {
 			HandleException.getException(respondCode);
 			return new Pair<>(respondCode, null);
 		} else {
-			updateReturnBikeStatus(_card, bike, _newDockID, refundAmount, returnTime.format(TimeManager.formatDayTime), rentBikeInvoice);
+			updateReturnBikeStatus(_card, bike, _newDockID, refundAmount, returnTime, rentBikeInvoice);
 		}
 
 		return new Pair<>(respondCode, rentBikeInvoice);
 	}
 
 	private static void updateReturnBikeStatus(CreditCard _card, Bike _bike, String _newDockID, int _refundAmount,
-			String _returnStamp, RentBikeInvoice _rentBikeInvoice) {
+			LocalDateTime _returnStamp, RentBikeInvoice _rentBikeInvoice) {
 
 		RentBikeController.rentalCode = null;
 		int rentCost = _rentBikeInvoice.getDeposit() - _refundAmount;
-		_rentBikeInvoice.updateAfterReturnBike(_returnStamp, rentCost);
+		_rentBikeInvoice.updateAfterReturnBike(_returnStamp.format(TimeManager.formatDayTime), rentCost);
 
 		PaymentTransaction paymentTransaction = new PaymentTransaction(_rentBikeInvoice.getRentalCode(),
 				_card.getCardNumber(), _card.getOwner(), Constants.RETURN_MESSAGE, _refundAmount, _returnStamp);

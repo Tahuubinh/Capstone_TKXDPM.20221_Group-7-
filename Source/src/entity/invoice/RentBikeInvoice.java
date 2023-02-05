@@ -1,5 +1,7 @@
 package entity.invoice;
 
+import entity.DAO.RentBikeInvoiceDAO;
+
 public class RentBikeInvoice {
 
 	// rental code
@@ -127,5 +129,18 @@ public class RentBikeInvoice {
 		String s8 = String.format("  %-30s%-30d", "Rent bike cost", rentCost);
 
 		return s0 + '\n' + s1 + '\n' + s2 + '\n' + s3 + '\n' + s4 + '\n' + s5 + '\n' + s6 + '\n' + s7 + '\n' + s8;
+	}
+
+	/**
+	 * save rent bike invoice in database
+	 */
+	public void saveRentBikeInvoice() {
+		RentBikeInvoiceDAO.save(bikeCode, rentalCode, type, rentTime, returnTime, rentCost, owner, deposit);
+	}
+
+	public void updateAfterReturnBike(String returnTime, int rentCost) {
+		this.returnTime = returnTime;
+		this.rentCost = rentCost;
+		RentBikeInvoiceDAO.updateAfterReturnBike(rentalCode, rentCost, returnTime);
 	}
 }

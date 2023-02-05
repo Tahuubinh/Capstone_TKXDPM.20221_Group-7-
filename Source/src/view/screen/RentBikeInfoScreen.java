@@ -20,10 +20,6 @@ import util.Constants;
 import view.screen.box.NotificationBox;
 import view.screen.Account;
 
-/**
- * @author duydc
- *
- */
 public class RentBikeInfoScreen implements Initializable {
 	@FXML
 	private ListView<String> bikeInfo;

@@ -22,10 +22,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import util.Constants;
 
-/**
- * @author duydc
- *
- */
 public class RentalBikeScreen {
 	@FXML
 	private Label bikeCode, type, remainBattery, rentDuration, rentCost;

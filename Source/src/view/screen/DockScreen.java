@@ -15,10 +15,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import util.Constants;
 
-/**
- * @author longld
- *
- */
 public class DockScreen {
 	private Dock dock;
 

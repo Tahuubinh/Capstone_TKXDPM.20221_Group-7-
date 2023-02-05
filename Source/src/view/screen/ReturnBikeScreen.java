@@ -24,10 +24,6 @@ import util.HandleException;
 import view.screen.box.ConfirmBox;
 import view.screen.box.NotificationBox;
 
-/**
- * @author duydc
- *
- */
 public class ReturnBikeScreen implements Initializable {
 	private ArrayList<Dock> docks;
 	private String rentalCode;

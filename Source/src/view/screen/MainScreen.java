@@ -20,10 +20,6 @@ import javafx.stage.Stage;
 import util.Constants;
 import view.screen.box.NotificationBox;
 
-/**
- * @author anvd
- *
- */
 public class MainScreen implements Initializable {
 	ArrayList<Dock> docks;
 

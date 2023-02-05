@@ -18,10 +18,6 @@ import javafx.util.Pair;
 import util.Constants;
 import view.screen.box.NotificationBox;
 
-/**
- * @author anvd
- *
- */
 public class RentBikeScreen {
 	@FXML
 	private TextField barcode;

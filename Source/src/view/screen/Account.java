@@ -15,11 +15,6 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import util.Constants;
 
-
-/**
- * @author duydc
- *
- */
 public class Account implements Initializable{
 	
 	public static int acc = 100000000;

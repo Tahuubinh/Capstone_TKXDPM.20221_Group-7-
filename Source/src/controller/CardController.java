@@ -1,6 +1,10 @@
 package controller;
 
 import entity.DAO.PaymentTransactionDAO;
+import util.TimeManager;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeParseException;
 
 public class CardController {
 	
@@ -13,7 +17,7 @@ public class CardController {
 	}
 
 	private static boolean validateCardCode(String _cardCode) {
-		return _cardCode == 16 && _cardCode.matches("[0-9]+");
+		return _cardCode.length() == 16 && _cardCode.matches("[0-9]+");
 	}
 
 	private static boolean validateOwner(String _owner) {

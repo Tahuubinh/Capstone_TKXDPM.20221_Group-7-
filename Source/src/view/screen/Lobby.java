@@ -11,10 +11,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import util.Constants;
 
-/**
- * @author anvd
- *
- */
 public class Lobby {
 	public static boolean reset = false;
 

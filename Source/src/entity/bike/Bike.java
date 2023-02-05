@@ -1,10 +1,12 @@
 package entity.bike;
 
+import entity.DAO.BikeDAO;
+
 import java.util.ArrayList;
 
 public abstract class Bike {
 
-	enum type {
+	public enum type {
 		singleNormal,
 		doubleNormal,
 		singleElectric
@@ -87,7 +89,7 @@ public abstract class Bike {
 		this.bikeLicense = _bikeLicense;
 	}
 
-	public type getbikeType() {
+	public type getBikeType() {
 		return bikeType;
 	}
 
@@ -135,7 +137,18 @@ public abstract class Bike {
 	 * @return String: general information of bike
 	 */
 	public String getGeneralInfo() {
-		return bikeID + " - " + getbikeType().name();
+		return bikeID + " - " + getBikeType().name();
+	}
+
+	/**
+	 * Update dock status
+	 * 
+	 * @param inUse
+	 * @param dockID
+	 */
+	public void updateStatus(boolean _inUse, String _dockID) {
+		this.inUse = _inUse;
+		BikeDAO.updateStatus(this.bikeID, _inUse, _dockID);
 	}
 
 	/**
@@ -150,7 +163,7 @@ public abstract class Bike {
 		result.add(String.valueOf(numSeat));
 		result.add(dockID);
 		result.add(bikeLicense);
-		result.add(this.getbikeType().name());
+		result.add(this.getBikeType().name());
 		result.add(String.valueOf(this.calculateDeposit()));
 		return result;
 	}
