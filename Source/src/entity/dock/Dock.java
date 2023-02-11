@@ -96,8 +96,13 @@ public class Dock {
 	public Bike getBikeFromString(String _bikeInfo) {
 		for (Bike bike : this.getBikes()) {
 			String str = bike.getGeneralInfo();
-			if (_bikeInfo.equals(str)) {
-				return bike;
+			try {
+				if (_bikeInfo.equals(str)) {
+					return bike;
+				}
+				
+			} catch (Exception e) {
+				System.err.println("Not found bike info: " + _bikeInfo);
 			}
 		}
 		return null;
@@ -118,8 +123,13 @@ public class Dock {
 	 */
 	public Bike getBikeByID(int _bikeID) {
 		for (Bike bike : this.getBikes()) {
-			if (_bikeID == bike.getBikeID()) {
-				return bike;
+			try {
+				if (_bikeID == bike.getBikeID()) {
+					return bike;
+				}
+				
+			} catch (Exception e) {
+				System.err.println("Not found bike ID: " + _bikeID);
 			}
 		}
 		return null;

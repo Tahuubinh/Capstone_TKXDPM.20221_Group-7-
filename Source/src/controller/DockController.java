@@ -11,14 +11,19 @@ public class DockController {
 	public static ArrayList<Dock> getDocks() {
 		ArrayList<Dock> docks = new ArrayList<>();
 		ArrayList<ArrayList<String>> dockTable = Dock.getDockTable();
-		for (ArrayList<String> row : dockTable) {
-			String dockID = row.get(0);
-			String name = row.get(1);
-			String area = row.get(2);
-			String address = row.get(3);
-			int numberOfDockingPoints = Integer.parseInt(row.get(5));
-			ArrayList<Bike> bikes = getBikes(dockID);
-			docks.add(new Dock(dockID, name, address, area, numberOfDockingPoints, bikes));
+		try {
+			for (ArrayList<String> row : dockTable) {
+				String dockID = row.get(0);
+				String name = row.get(1);
+				String area = row.get(2);
+				String address = row.get(3);
+				int numberOfDockingPoints = Integer.parseInt(row.get(5));
+				ArrayList<Bike> bikes = getBikes(dockID);
+				docks.add(new Dock(dockID, name, address, area, numberOfDockingPoints, bikes));
+			}
+		} catch (Exception e) {
+			System.err.println("Cannot get dock from database!");
+			e.printStackTrace();
 		}
 		return docks;
 	}
@@ -28,9 +33,6 @@ public class DockController {
 		ArrayList<Bike> bikes = new ArrayList<>();
 		try {
 			for (ArrayList<String> row : bikeTable) {
-//				for (String x: row) {
-//					System.out.println(x);
-//				}
 				bikes.add(Bike.getBike(row));
 			}
 		} catch (Exception e) {
@@ -43,19 +45,30 @@ public class DockController {
 	public static Dock getDockFromString(String _dockInfo) {
 		for (Dock dock : getDocks()) {
 			String s = dock.toString();
-			if (_dockInfo.equals(s)) {
-				return dock;
+			try {
+				if (_dockInfo.equals(s)) {
+					return dock;
+				}	
+			} catch (Exception e) {
+				System.err.println("Not found dock info: " + s);
+				e.printStackTrace();
 			}
 		}
 		return null;
 	}
 
 	public static Bike getBikeFromID(int _id) {
-		for (ArrayList<String> bikeString : BikeDAO.getBikes()) {
-			if (Bike.getBike(bikeString).getBikeID() == _id) {
-				return Bike.getBike(bikeString);
+		try {
+			for (ArrayList<String> bikeString : BikeDAO.getBikes()) {
+				if (Bike.getBike(bikeString).getBikeID() == _id) {
+					return Bike.getBike(bikeString);
+				}
 			}
+			
+		} catch (Exception e) {
+			System.err.println("Not found bikeID: " + _id);
 		}
+		
 		return null;
 	}
 	
