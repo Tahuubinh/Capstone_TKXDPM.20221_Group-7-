@@ -1,6 +1,8 @@
-package entity.DAO;
+package entity.dock;
 
 import java.util.ArrayList;
+
+import entity.DBConnection;
 
 public class DockDAO {
 	public static ArrayList<ArrayList<String>> getAllDocks() {

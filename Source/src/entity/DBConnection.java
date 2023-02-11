@@ -1,4 +1,4 @@
-package entity.DAO;
+package entity;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

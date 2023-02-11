@@ -1,7 +1,5 @@
 package entity.bike;
 
-import entity.DAO.BikeDAO;
-
 import java.util.ArrayList;
 
 public abstract class Bike {

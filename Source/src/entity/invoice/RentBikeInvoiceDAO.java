@@ -1,6 +1,8 @@
-package entity.DAO;
+package entity.invoice;
 
 import java.util.ArrayList;
+
+import entity.DBConnection;
 
 public class RentBikeInvoiceDAO {
 

@@ -1,6 +1,5 @@
 package entity.transaction;
 
-import entity.DAO.PaymentTransactionDAO;
 import util.TimeManager;
 
 import java.time.LocalDateTime;

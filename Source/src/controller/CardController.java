@@ -1,10 +1,11 @@
 package controller;
 
-import entity.DAO.PaymentTransactionDAO;
 import util.TimeManager;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
+
+import entity.transaction.PaymentTransactionDAO;
 
 public class CardController {
 	

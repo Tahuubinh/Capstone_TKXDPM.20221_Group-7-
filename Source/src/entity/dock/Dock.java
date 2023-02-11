@@ -1,8 +1,7 @@
 package entity.dock;
 
 import java.util.ArrayList;
-import entity.bike.Bike;
-import entity.DAO.DockDAO;;
+import entity.bike.Bike;;
 
 public class Dock {
 

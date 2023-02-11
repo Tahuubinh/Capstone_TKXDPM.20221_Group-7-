@@ -5,7 +5,7 @@ import entity.card.CreditCard;
 import entity.dock.Dock;
 import entity.transaction.PaymentTransaction;
 import entity.invoice.RentBikeInvoice;
-import entity.DAO.RentBikeInvoiceDAO;
+import entity.invoice.RentBikeInvoiceDAO;
 import subsystem.interbank.IInterbank;
 import subsystem.interbank.Interbank;
 import util.*;

@@ -1,8 +1,9 @@
 package controller;
 
 import entity.bike.Bike;
+import entity.bike.BikeDAO;
 import entity.dock.Dock;
-import entity.DAO.BikeDAO;
+
 import java.util.ArrayList;
 
 public class DockController {
