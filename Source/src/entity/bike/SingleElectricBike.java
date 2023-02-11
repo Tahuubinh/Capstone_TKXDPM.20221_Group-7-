@@ -17,9 +17,9 @@ public class SingleElectricBike extends Bike {
 	 */
 	public SingleElectricBike(ArrayList<String> _bike) {
 		super(_bike);
-		this.setBikeType(type.valueOf(_bike.get(7)));
-		this.setMaxTime(Double.parseDouble(_bike.get(9)));
-		this.setRemainBattery(Double.parseDouble(_bike.get(10)));
+		this.setBikeType(type.valueOf(_bike.get(1)));
+		this.setMaxTime(Double.parseDouble(_bike.get(6)));
+		this.setRemainBattery(Double.parseDouble(_bike.get(5)));
 	}
 
 	public Double getRemainBattery() {

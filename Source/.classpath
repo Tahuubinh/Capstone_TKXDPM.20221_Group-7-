@@ -7,5 +7,22 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/httpclient-4.5.13.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/httpcore-4.4.14.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/jackson-annotations-2.10.5.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/jackson-core-2.10.5.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/jackson-databind-2.11.1.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/json-20190722.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/junit-4.13.1.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/lombok.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/mysql-connector-java-5.1.49.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/slf4j-jdk14-1.7.30.jar"/>
+	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/spring-web-5.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

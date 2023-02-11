@@ -11,7 +11,7 @@ public class SingleNormalBike extends Bike {
 	 */
 	public SingleNormalBike(ArrayList<String> _bike) {
 		super(_bike);
-		this.setBikeType(type.valueOf(_bike.get(7)));
+		this.setBikeType(type.valueOf(_bike.get(1)));
 	}
 
 	/**

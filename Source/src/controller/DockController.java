@@ -25,8 +25,16 @@ public class DockController {
 	public static ArrayList<Bike> getBikes(String _dockID) {
 		ArrayList<ArrayList<String>> bikeTable = BikeDAO.queryWithDockID(_dockID);
 		ArrayList<Bike> bikes = new ArrayList<>();
-		for (ArrayList<String> row : bikeTable) {
-			bikes.add(Bike.getBike(row));
+		try {
+			for (ArrayList<String> row : bikeTable) {
+//				for (String x: row) {
+//					System.out.println(x);
+//				}
+				bikes.add(Bike.getBike(row));
+			}
+		} catch (Exception e) {
+			System.err.println("Cannot get some types of bikes from database!");
+			e.printStackTrace();
 		}
 		return bikes;
 	}

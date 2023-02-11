@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class DBConnection {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/ecoBike";
 	private static final String USER_NAME = "root";
-	private static final String PASSWORD = "123456";
+	private static final String PASSWORD = "12345678";
 	private static Connection connection = getConnection();
 	
 	public static Connection getConnection() {
@@ -21,6 +21,7 @@ public class DBConnection {
 			System.out.println("Successfully!");
 		} catch (Exception ex) {
 			System.out.println("Failure!");
+			System.out.println(ex);
 			ex.printStackTrace();
 		}
 		return connection;

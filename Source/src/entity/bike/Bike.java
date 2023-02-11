@@ -183,7 +183,8 @@ public abstract class Bike {
 	 * @return bike with exact bikeType
 	 */
 	public static final Bike getBike(ArrayList<String> _bike) {
-		switch (_bike.get(7)) {
+		String bikeTypeString = _bike.get(1);
+		switch (bikeTypeString) {
 			case "singleNormal":
 				return new SingleNormalBike(_bike);
 			case "doubleNormal":
@@ -191,7 +192,7 @@ public abstract class Bike {
 			case "singleElectric":
 				return new SingleElectricBike(_bike);
 			default:
-				throw new IllegalArgumentException("This type is not available");
+				throw new IllegalArgumentException("This type " + bikeTypeString +" is not available");
 		}
 	}
 }
