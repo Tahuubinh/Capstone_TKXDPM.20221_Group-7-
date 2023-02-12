@@ -9,26 +9,27 @@ import controller.CardController;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
 
-public class ValidateCardCodeTest {
+public class ValidateOwnerTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
 	}
 	
 	/*
-	 * String cardCode, Boolean expected
+	 * String owner, Boolean expected
 	 */
 	@ParameterizedTest
 	@CsvSource({ 
-		"1234567812345678, true", 
-		"123av67812345678, false", 
-		"1234512345678, false",
-		"abc, false", 
-		", false",
+		"NGUYEN VAN AN, true", 
+		"Nguyen Van an, true", 
+		"nguyen van an, true", 
+		"Nguyen Van 2, false", 
+		"234, false",
+		", false"
 
 	})
-	void test(String cardCode, boolean expected) {
-		boolean isValid = CardController.validateCardCode(cardCode);
+	void test(String owner, boolean expected) {
+		boolean isValid = CardController.validateOwner(owner);
 		assertEquals(expected, isValid);
 	}
 

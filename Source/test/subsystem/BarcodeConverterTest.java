@@ -9,7 +9,7 @@ import subsystem.barcodeconverter.BarcodeConverter;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
 
-class BarcodeConverterTest {
+public class BarcodeConverterTest {
 	private BarcodeConverter barcodeConverter;
 
 	@BeforeEach
@@ -18,7 +18,7 @@ class BarcodeConverterTest {
 	}
 
 	/*
-	 * String, String barcode, expected bike code
+	 * String barcode, String expected bikeCode
 	 */
 	@ParameterizedTest
 	@CsvSource({ "123, 123",

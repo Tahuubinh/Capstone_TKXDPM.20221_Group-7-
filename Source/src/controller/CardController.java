@@ -21,16 +21,16 @@ public class CardController {
 		return _cardCode != null && _cardCode.length() == 16 && _cardCode.matches("[0-9]+");
 	}
 
-	private static boolean validateOwner(String _owner) {
-		return (!(_owner == null)) && _owner.matches("[a-zA-Z]+");
+	public static boolean validateOwner(String _owner) {
+		return (!(_owner == null)) && _owner.matches("[a-zA-Z\\s]+");
 	}
 
-	private static boolean validateCcvCode(String _cvvCode) {
-		return _cvvCode.length() == 3 && _cvvCode.matches("[0-9]+");
+	public static boolean validateCcvCode(String _cvvCode) {
+		return _cvvCode != null && _cvvCode.length() == 3 && _cvvCode.matches("[0-9]+");
 	}
 
-	private static boolean validateExpiredDate(String _expiredDate) {
-		return _expiredDate.length() == 4 && _expiredDate.matches("[0-9]+") && !checkExpiredDate(_expiredDate);
+	public static boolean validateExpiredDate(String _expiredDate) {
+		return _expiredDate != null && _expiredDate.length() == 4 && _expiredDate.matches("[0-9]+") && !checkExpiredDate(_expiredDate);
 	}
 
 	private static boolean checkExpiredDate(String _expiredDate) {

@@ -9,26 +9,30 @@ import controller.CardController;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
 
-public class ValidateCardCodeTest {
+public class ValidateExpiredDateTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
 	}
 	
 	/*
-	 * String cardCode, Boolean expected
+	 * String expiredDate, Boolean expected
 	 */
 	@ParameterizedTest
 	@CsvSource({ 
-		"1234567812345678, true", 
-		"123av67812345678, false", 
-		"1234512345678, false",
-		"abc, false", 
-		", false",
+		"1111, true", 
+		"0123, true", 
+		"1300, true", 
+		"1234, true", 
+		"0000, true",  
+		"00000, false",
+		"000, false", 
+		"a123, false", 
+		", false"
 
 	})
-	void test(String cardCode, boolean expected) {
-		boolean isValid = CardController.validateCardCode(cardCode);
+	void test(String expiredDate, boolean expected) {
+		boolean isValid = CardController.validateExpiredDate(expiredDate);
 		assertEquals(expected, isValid);
 	}
 

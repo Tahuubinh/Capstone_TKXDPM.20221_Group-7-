@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import subsystem.interbank.Interbank;
 import entity.card.CreditCard;
 
-class InterbankTest {
+public class InterbankTest {
 
 	private Interbank interbankController;
 
@@ -22,9 +22,9 @@ class InterbankTest {
     }
 
     /*
-	 * String, String, String, String, int, String, Format String, String, String
-	 * (error code) cardCode, owner, CVV, expired Date, amount, content, createdAt,
-	 * command, expected
+	 * String cardCode, String owner, String CVV, String expired Date, 
+	 * int amount, String content, String createdAt, String command, 
+	 * String expected errorCode
 	 */
 	@ParameterizedTest
 	// @CsvFileSource(resources = "InterbankTest.csv", numLinesToSkip = 1)
@@ -37,12 +37,12 @@ class InterbankTest {
     		String amount, String content, String createdAt, String command, 
     		String expected) {
 		CreditCard card = new CreditCard(cardCode, owner, cvv, expiredDate);
-		try {
-			System.out.println(interbankController.processTransaction(card, (int) Integer.parseInt(amount), 
-					content, createdAt, command));
-		} catch (Exception e) {
-			System.out.println(e);
-		}
+//		try {
+//			System.out.println(interbankController.processTransaction(card, (int) Integer.parseInt(amount), 
+//					content, createdAt, command));
+//		} catch (Exception e) {
+//			System.out.println(e);
+//		}
 		
 		
 		assertEquals(interbankController.processTransaction(card, (int) Integer.parseInt(amount), 

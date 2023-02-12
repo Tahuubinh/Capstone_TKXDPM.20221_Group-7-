@@ -9,26 +9,26 @@ import controller.CardController;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
 
-public class ValidateCardCodeTest {
+public class ValidateCvvCodeTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
 	}
 	
 	/*
-	 * String cardCode, Boolean expected
+	 * String cvvCode, Boolean expected
 	 */
 	@ParameterizedTest
 	@CsvSource({ 
-		"1234567812345678, true", 
-		"123av67812345678, false", 
-		"1234512345678, false",
-		"abc, false", 
-		", false",
+		"123, true", 
+		"1234, false", 
+		"2 3, false", 
+		"2av, false",
+		", false"
 
 	})
-	void test(String cardCode, boolean expected) {
-		boolean isValid = CardController.validateCardCode(cardCode);
+	void test(String cvvCode, boolean expected) {
+		boolean isValid = CardController.validateCcvCode(cvvCode);
 		assertEquals(expected, isValid);
 	}
 
