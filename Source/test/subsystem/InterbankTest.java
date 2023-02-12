@@ -27,12 +27,12 @@ class InterbankTest {
 	 * command, expected
 	 */
 	@ParameterizedTest
-	@CsvFileSource(resources = "InterbankTest.csv", numLinesToSkip = 1)
-//	@CsvSource({ 
-//		"9999999999999999, Binh, 666, 1029, 400000, Rent bike, 2021-12-14 17:00:36, pay, 00",
-//		"9999999999999999, Binh, 666, 0, 0, Process for a transaction, 2021-06-12 17:00:36, pay, 00",
-//		"9999999999999999, Binh, 666, , 1400000, , 2021-05-12 15:18:30, pay, 00" 
-//	})
+	// @CsvFileSource(resources = "InterbankTest.csv", numLinesToSkip = 1)
+	@CsvSource({ 
+		"9999999999999999, Binh, 666, 1029, 400000, Rent bike, 2021-12-14 17:00:36, pay, 00",
+		"9999999999999999, Binh, 666, 0, 0, Process for a transaction, 2021-06-12 17:00:36, pay, 00",
+		"9999999999999999, Binh, 666, , 1400000, , 2021-05-12 15:18:30, pay, 00" 
+	})
     public void test(String cardCode, String owner, String cvv, String expiredDate, 
     		String amount, String content, String createdAt, String command, 
     		String expected) {
