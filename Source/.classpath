@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -24,5 +25,6 @@
 	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/slf4j-jdk14-1.7.30.jar"/>
 	<classpathentry kind="lib" path="D:/Class_modules/TKXDPM/Capstone_TKXDPM.20221_Group-7-/Source/lib/java_lib/spring-web-5.3.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
