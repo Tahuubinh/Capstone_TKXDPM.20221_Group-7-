@@ -17,8 +17,8 @@ public class CardController {
 		return (validateCardCode(_cardCode) && validateOwner(_owner) && validateCcvCode(_ccvCode) && validateExpiredDate(_expiredDate));
 	}
 
-	private static boolean validateCardCode(String _cardCode) {
-		return _cardCode.length() == 16 && _cardCode.matches("[0-9]+");
+	public static boolean validateCardCode(String _cardCode) {
+		return _cardCode != null && _cardCode.length() == 16 && _cardCode.matches("[0-9]+");
 	}
 
 	private static boolean validateOwner(String _owner) {

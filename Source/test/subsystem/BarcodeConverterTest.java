@@ -25,8 +25,6 @@ class BarcodeConverterTest {
 		         "01, 01",
 		         "10, 10"    
 	})
-	
-	@Test
 	public void test(int barcode, int expected) {
 		assertEquals(barcodeConverter.convertBarcodeToBikeCode(barcode), expected);
 	}
