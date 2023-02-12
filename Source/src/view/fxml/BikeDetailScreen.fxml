@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1014.0" style="-fx-background-color: &quot;A6FFC1&quot;;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.screen.BikeDetailScreen">
+   <bottom>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="© EcoBike Group 7" textAlignment="CENTER" wrappingWidth="725.1025390625" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Segoe UI Historic" size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Text>
+   </bottom>
+   <left>
+      <VBox prefHeight="474.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="617.0" prefWidth="1183.0" style="-fx-background-color: white;">
+               <children>
+                  <Label alignment="CENTER" layoutX="-6.0" prefHeight="77.0" prefWidth="1021.0" style="-fx-background-color: &quot;B4E6CF&quot;;" text="Bike Detail Information">
+                     <font>
+                        <Font name="Segoe UI Historic" size="32.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton" layoutX="395.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleBackButtonClick" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: &quot;6DFF49&quot;; -fx-background-radius: 20;" text="Back">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="bikeInfo" layoutX="94.0" layoutY="117.0" prefHeight="374.0" prefWidth="825.0" style="-fx-background-color: CYAN; -fx-border-width: 3; -fx-border-color: RED; -fx-font-weight: bold; -fx-font-family: Calibri;" />
+                  <Button fx:id="barcode" layoutX="610.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleBarcodeButtonClick" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: &quot;6DFF49&quot;; -fx-background-radius: 20;" text="Generate Barcode">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="rent" layoutX="177.0" layoutY="535.0" mnemonicParsing="false" onAction="#handleRentButtonClick" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: &quot;6DFF49&quot;; -fx-background-radius: 20;" text="Rent">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <Region prefHeight="0.0" prefWidth="385.0" style="-fx-background-color: #ffbf00;" BorderPane.alignment="CENTER" />
+   </top>
+   <opaqueInsets>
+      <Insets bottom="1.0" right="1.0" top="1.0" />
+   </opaqueInsets>
+</BorderPane>
