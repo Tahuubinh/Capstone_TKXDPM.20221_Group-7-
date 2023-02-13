@@ -5,6 +5,6 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({ BarcodeConverterTest.class, InterbankTest.class })
-public class AllTests {
+public class AllTestsSubsystem {
 
 }

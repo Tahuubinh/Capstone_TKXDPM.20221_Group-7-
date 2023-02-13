@@ -6,6 +6,6 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @SelectClasses({ ValidateCardCodeTest.class, ValidateCvvCodeTest.class, ValidateExpiredDateTest.class,
 		ValidateOwnerTest.class })
-public class AllTests {
+public class AllTestsCardController {
 
 }
