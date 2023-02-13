@@ -12,6 +12,18 @@ public class Time {
 		this.second = second;
 		this.tic = tic;
 	}
+	public int getHour() {
+		return hour;
+	}
+	public int getMinute() {
+		return minute;
+	}
+	public int getSecond() {
+		return second;
+	}
+	public int getTic() {
+		return tic;
+	}
 	
 	
 }
