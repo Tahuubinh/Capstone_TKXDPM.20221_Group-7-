@@ -2,7 +2,7 @@ package entity.bike;
 
 import java.util.ArrayList;
 
-import entity.DBBinder;
+import entity.DBConnection;
 
 public class BikeDAO {
 
@@ -10,7 +10,7 @@ public class BikeDAO {
 		int status = inUse ? 1 : 0;
 		String command = "UPDATE bike SET inUse=" + status + ", dockID=" + '\'' + dockID + '\'' + " WHERE bikeID="
 				+ bikeID;
-		DBBinder.execute(command);
+		DBConnection.execute(command);
 	}
 
 	/**
@@ -21,7 +21,7 @@ public class BikeDAO {
 	public static ArrayList<ArrayList<String>> queryWithDockID(String dockID) {
 		ArrayList<ArrayList<String>> s = new ArrayList<>();
 		String command = "SELECT * from bike WHERE dockID=" + '\'' + dockID + '\'';
-		s = DBBinder.query(command);
+		s = DBConnection.query(command);
 		return s;
 	}
 
@@ -33,7 +33,7 @@ public class BikeDAO {
 	public static ArrayList<ArrayList<String>> queryWithBikeCode(int bikeCode) {
 		ArrayList<ArrayList<String>> s = new ArrayList<>();
 		String command = "SELECT * from bike WHERE bikeID=" + '\'' + bikeCode + '\'';
-		s = DBBinder.query(command);
+		s = DBConnection.query(command);
 		System.out.println(s);
 		return s;
 	}
@@ -44,7 +44,7 @@ public class BikeDAO {
 	public static ArrayList<ArrayList<String>> getBikes() {
 		ArrayList<ArrayList<String>> s = new ArrayList<>();
 		String command = "SELECT * from bike";
-		s = DBBinder.query(command);
+		s = DBConnection.query(command);
 		return s;
 	}
 

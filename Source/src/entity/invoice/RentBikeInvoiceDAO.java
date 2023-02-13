@@ -2,7 +2,7 @@ package entity.invoice;
 
 import java.util.ArrayList;
 
-import entity.DBBinder;
+import entity.DBConnection;
 
 
 public class RentBikeInvoiceDAO {
@@ -13,7 +13,7 @@ public class RentBikeInvoiceDAO {
 				+ ", " + '\'' + type + '\'' + ", " + rentBikeCost + ", " + '\'' + owner + '\'' + ", " + '\'' + rentTime
 				+ '\'' + ", " + '\'' + returnTime + '\'' + ", " + deposit + ")";
 
-		DBBinder.execute(command);
+		DBConnection.execute(command);
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class RentBikeInvoiceDAO {
 	public static ArrayList<ArrayList<String>> queryByRentalCode(String rentalCode) {
 		String command = "SELECT * FROM rentbikeinvoice WHERE rentalCode=" + '\'' + rentalCode + '\'';
 		System.out.println(command);
-		return DBBinder.query(command);
+		return DBConnection.query(command);
 	}
 
 	/**
@@ -35,6 +35,6 @@ public class RentBikeInvoiceDAO {
 	public static void updateAfterReturnBike(String rentalCode, int rentBikeCost, String returnTime) {
 		String command = "UPDATE rentbikeinvoice SET rentBikeCost=" + rentBikeCost + ", returnTime=" + '\'' + returnTime
 				+ '\'' + " WHERE rentalCode=" + '\'' + rentalCode + '\'';
-		DBBinder.execute(command);
+		DBConnection.execute(command);
 	}
 }

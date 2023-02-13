@@ -2,7 +2,7 @@ package entity.dock;
 
 import java.util.ArrayList;
 
-import entity.DBBinder;
+import entity.DBConnection;
 
 public class DockDAO {
 	/**
@@ -10,7 +10,7 @@ public class DockDAO {
 	 */
 	public static ArrayList<ArrayList<String>> getAllDocks() {
 		String command = "SELECT * FROM dock";
-		return DBBinder.query(command);
+		return DBConnection.query(command);
 	}
 
 	/**
@@ -21,6 +21,6 @@ public class DockDAO {
 	public static void updateRemainCapacity(String dockID, String difference) {
 		String command = "UPDATE dock SET remainCapacity = remainCapacity + " + difference + " WHERE dockID=\"" + dockID
 				+ "\"";
-		DBBinder.execute(command);
+		DBConnection.execute(command);
 	}
 }

@@ -2,7 +2,6 @@ package entity.card;
 
 import java.util.ArrayList;
 
-import entity.DAO.*;
 
 public class CreditCard{
 	/**

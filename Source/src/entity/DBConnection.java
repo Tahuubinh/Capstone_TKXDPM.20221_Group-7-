@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class DBBinder {
+public class DBConnection {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/ecoBike";
 	private static final String USER_NAME = "root";
 	private static final String PASSWORD = "12345678";

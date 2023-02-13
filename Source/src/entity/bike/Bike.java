@@ -2,8 +2,6 @@ package entity.bike;
 
 import java.util.ArrayList;
 
-import entity.DAO.*;
-
 public abstract class Bike {
 	/**
 	 * id of bike

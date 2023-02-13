@@ -1,7 +1,5 @@
 package entity.transaction;
 
-import entity.DAO.*;
-
 
 public class PaymentTransaction {
 	/**
