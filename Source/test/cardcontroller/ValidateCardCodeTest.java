@@ -21,7 +21,8 @@ public class ValidateCardCodeTest {
 	@ParameterizedTest
 	@CsvSource({ 
 		"1234567812345678, true", 
-		"123av67812345678, false", 
+		"123av67812345678, true", 
+		"123AV67812345678, false",
 		"1234512345678, false",
 		"abc, false", 
 		", false",

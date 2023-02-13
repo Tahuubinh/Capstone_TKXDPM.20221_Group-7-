@@ -22,9 +22,11 @@ public class ValidateExpiredDateTest {
 	@CsvSource({ 
 		"1111, true", 
 		"0123, true", 
-		"1300, true", 
+		"1299, true", 
+		"1300, false", 
 		"1234, true", 
-		"0000, true",  
+		"0000, false",  
+		"0100, true", 
 		"00000, false",
 		"000, false", 
 		"a123, false", 

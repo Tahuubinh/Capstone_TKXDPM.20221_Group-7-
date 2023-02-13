@@ -20,8 +20,9 @@ public class ValidateCvvCodeTest {
 	 */
 	@ParameterizedTest
 	@CsvSource({ 
-		"123, true", 
-		"1234, false", 
+		"0123, true", 
+		"123, false", 
+		"1234, true", 
 		"2 3, false", 
 		"2av, false",
 		", false"

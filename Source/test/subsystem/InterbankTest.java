@@ -36,7 +36,7 @@ public class InterbankTest {
     public void test(String cardCode, String owner, String cvv, String expiredDate, 
     		String amount, String content, String createdAt, String command, 
     		String expected) {
-		CreditCard card = new CreditCard(cardCode, owner, cvv, expiredDate);
+		CreditCard card = new CreditCard(cardCode, owner, cvv, expiredDate, 100000000);
 //		try {
 //			System.out.println(interbankController.processTransaction(card, (int) Integer.parseInt(amount), 
 //					content, createdAt, command));
