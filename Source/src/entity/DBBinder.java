@@ -1,4 +1,4 @@
-package entity.DAO;
+package entity;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DBBinder {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/ecoBike";
 	private static final String USER_NAME = "root";
-	private static final String PASSWORD = "123456";
+	private static final String PASSWORD = "12345678";
 	private static Connection connection = getConnection();
 
 	/**

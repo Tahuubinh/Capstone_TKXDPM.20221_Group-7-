@@ -1,7 +1,5 @@
 package entity.invoice;
 
-import entity.DAO.RentBikeInvoiceDAO;
-
 public class RentBikeInvoice {
 	/**
 	 * rental code

@@ -15,7 +15,6 @@ import entity.transaction.*;
 import entity.invoice.*;
 import entity.bike.Bike;
 import entity.card.CreditCard;
-import entity.DAO.RentBikeInvoiceDAO;
 
 
 public class RentBikeController {

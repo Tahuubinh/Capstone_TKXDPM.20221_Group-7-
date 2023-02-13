@@ -1,6 +1,8 @@
-package entity.DAO;
+package entity.bike;
 
 import java.util.ArrayList;
+
+import entity.DBBinder;
 
 public class BikeDAO {
 

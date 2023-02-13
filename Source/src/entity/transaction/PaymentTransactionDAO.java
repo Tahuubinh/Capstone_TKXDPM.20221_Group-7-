@@ -1,5 +1,6 @@
-package entity.DAO;
+package entity.transaction;
 
+import entity.DBBinder;
 import util.Constants;
 
 

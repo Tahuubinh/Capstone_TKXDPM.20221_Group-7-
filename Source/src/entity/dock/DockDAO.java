@@ -1,6 +1,8 @@
-package entity.DAO;
+package entity.dock;
 
 import java.util.ArrayList;
+
+import entity.DBBinder;
 
 public class DockDAO {
 	/**

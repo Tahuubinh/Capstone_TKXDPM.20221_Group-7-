@@ -1,6 +1,8 @@
-package entity.DAO;
+package entity.card;
 
 import java.util.ArrayList;
+
+import entity.DBBinder;
 
 public class CreditcardDAO {
 
