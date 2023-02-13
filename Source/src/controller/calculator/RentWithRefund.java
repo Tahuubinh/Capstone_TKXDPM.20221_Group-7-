@@ -2,11 +2,11 @@ package controller.calculator;
 
 import entity.bike.*;
 
-public class Strategy1 implements Calculator {
+public class RentWithRefund implements Calculator {
 
 	@Override
 	public int calculateRentBike(Bike bike, int time) {
-		return 0;
+		return 200000 - (12 - time) * 10000;
 	}
 
 }
