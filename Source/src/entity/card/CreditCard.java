@@ -14,10 +14,10 @@ public class CreditCard extends Card{
 	}
 	
 	public static void changeRemain(String cardcode, int remain) {
-		CreditcardDAO.updateStatus(cardcode, remain);
+		CardDAO.updateStatus(cardcode, remain);
 	}
 	
 	public static ArrayList<ArrayList<String>> getRemain(String cardcode) {
-		return CreditcardDAO.checkRemain(cardcode);
+		return CardDAO.checkRemain(cardcode);
 	}
 }

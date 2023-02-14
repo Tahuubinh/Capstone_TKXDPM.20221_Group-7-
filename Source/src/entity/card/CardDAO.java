@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import entity.DBConnection;
 
-public class CreditcardDAO {
+public class CardDAO {
 
 	/**
 	 * @return All creditcards
