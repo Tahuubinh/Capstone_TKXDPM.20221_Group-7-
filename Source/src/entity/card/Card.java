@@ -3,7 +3,7 @@ package entity.card;
 import java.util.ArrayList;
 
 
-public abstract class CreditCard{
+public abstract class Card{
 	/**
 	 * static variable holds the card
 	 */
@@ -30,7 +30,7 @@ public abstract class CreditCard{
 	private int remain;
 	
 	
-	public card(String cardCode, String owner, String cvv, String expiredDate, int remain) {
+	public Card(String cardCode, String owner, String cvv, String expiredDate, int remain) {
 		this.cardCode = cardCode;
 		this.owner = owner;
 		this.CVV = cvv;
@@ -73,15 +73,12 @@ public abstract class CreditCard{
 		return card;
 	}
 	
-	public int getRemain() {
-		return remain;
-	}
 
 	public void setRemain(int remain) {
     	this.remain = remain;
 	}
 	
-	public abstract void changeRemain(String cardcode, int remain);
+	//public abstract static void changeRemain(String cardcode, int remain);
 	
-	public abstract ArrayList<ArrayList<String>> getRemain(String cardcode);
+	// public abstract ArrayList<ArrayList<String>> getRemain(String cardcode);
 }

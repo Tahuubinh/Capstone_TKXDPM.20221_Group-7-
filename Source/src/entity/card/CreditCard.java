@@ -7,9 +7,9 @@ public class CreditCard extends Card{
 	/**
 	 * static variable holds the card
 	 */
-	private static CreditCard card = new CreditCard("kstn", "Group 7", "6187", "1234", 100000000);
+	private static Card card = new CreditCard("kstn", "Group 7", "6187", "1234", 100000000);
 	
-	private CreditCard(String cardCode, String owner, String cvv, String expiredDate, int remain) {
+	public CreditCard(String cardCode, String owner, String cvv, String expiredDate, int remain) {
 		super(cardCode, owner, cvv, expiredDate, remain);
 	}
 	
