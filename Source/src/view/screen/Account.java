@@ -59,8 +59,7 @@ public class Account {
 	
 	public void handleConfirmButtonClick() {
 		confirmButton.setOnAction(e -> {
-			if (cardcode.getText().length() > 4) NotificationBox.display("Notification", "Invalid Transaction: EROOR: Invalid Card!");
-			else if (cardcode.getText().isEmpty() || owner.getText().isEmpty() || cvv.getText().isEmpty()
+			if (cardcode.getText().isEmpty() || owner.getText().isEmpty() || cvv.getText().isEmpty()
 					|| exp.getText().isEmpty()) {
 				NotificationBox.display("Notification", "Please fill in all information!");
 			} else {
@@ -70,8 +69,11 @@ public class Account {
 					HandleException.getException(Constants.INVALID_CARD_INFO);
 				} else {
 					ArrayList<ArrayList<String>> s = new ArrayList<ArrayList<String>>();
-					s = CreditCard.getRemain(cardcode.getText());
-					NotificationBox.display("Notification", "Your balance account is: " + s.get(0).get(0));
+					s = CreditCard.getRemain(cardcode.getText(), owner.getText());
+					if (s == null) {
+						NotificationBox.display("Notification", "Invalid Card");
+					}
+					else NotificationBox.display("Notification", "Your balance account is: " + s.get(0).get(0));
 				}
 			}
 		});
