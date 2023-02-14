@@ -16,10 +16,6 @@ public class CardController {
 	public static boolean validateCardCode(String cardCode) {
 		if (cardCode == null)
 			return false;
-		
-		if (cardCode.length() != 16) {
-			return false;
-		}
 
 		if (!cardCode.matches("[a-z0-9_]+")) {
 			return false;
