@@ -25,10 +25,10 @@ public class CardController {
 	}
 
 	public static boolean validateOwner(String owner) {
-		if (owner == null || owner.charAt(0) == ' ' || owner.charAt(owner.length() - 1) == ' ' || owner.contains("  "))
+		if (owner == null)
 			return false;
 
-		if (!owner.matches("[A-Za-z\\s]+")) {
+		if (!owner.matches("[A-Za-z0-9\\s]+")) {
 			return false;
 		}
 
@@ -73,7 +73,7 @@ public class CardController {
 
 		try {
 			int expDate = Integer.parseInt(expiredDate);
-			if (100 <= expDate && expDate <= 1299) {
+			if (100 <= expDate && expDate <= 9999) {
 				return true;
 			} else
 				return false;
