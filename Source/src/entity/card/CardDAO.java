@@ -31,5 +31,12 @@ public class CardDAO {
 		s = DBConnection.query(command);
 		return s;
 	}
+	
+	public static ArrayList<ArrayList<String>> checkCard(String cardcode, String owner) {
+		ArrayList<ArrayList<String>> s = new ArrayList<>();
+		String command = "SELECT creditcard.remain FROM creditcard" + " WHERE cardcode = '" + cardcode + "' && owner = '" + owner + "'";
+		s = DBConnection.query(command);
+		return s;
+	}
 
 }
