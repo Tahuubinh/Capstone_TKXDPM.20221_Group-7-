@@ -14,6 +14,6 @@ public class CreditCard extends Card{
 	}
 	
 	public static ArrayList<ArrayList<String>> getRemain(String cardcode, String owner) {
-		return CreditcardDAO.checkCard(cardcode, owner);
+		return CardDAO.checkCard(cardcode, owner);
 	}
 }
