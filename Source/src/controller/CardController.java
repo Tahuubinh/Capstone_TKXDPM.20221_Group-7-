@@ -29,7 +29,7 @@ public class CardController {
 	}
 
 	public static boolean validateOwner(String owner) {
-		if (owner == null)
+		if (owner == null || owner.charAt(0) == ' ' || owner.charAt(owner.length() - 1) == ' ' || owner.contains("  "))
 			return false;
 
 		if (!owner.matches("[A-Za-z\\s]+")) {

@@ -20,14 +20,29 @@ public class ValidateOwnerTest {
 	 */
 	@ParameterizedTest
 	@CsvSource({ 
-		"NGUYEN VAN AN, true", 
-		"Nguyen Van an, true", 
-		"nguyen van an, true", 
-		"Nguyen Van 2, false", 
-		"234, false",
-		", false"
-
+		"AN9, false", 
+		"89, false", 
+		"AN, true", 
+		", false",	// No space
+		"Van An9, false", 
+		"8 9, false", 
+		"Van an, true", 
+		" , false",	// Single space
+		"Van  An9, false", 
+		"8  9, false", 
+		"Van  an, false", 
+		"Van   an, false",
+		"  , false",	// Double space
+		"' Van An9', false", 
+		"' 89', false", 
+		"' Van an', false", // Head space
+		"'Van An9 ', false", 
+		"'89 ', false", 
+		"'Van an ', false", // Tail space
 	})
+	
+	
+	
 	void test(String owner, boolean expected) {
 		boolean isValid = CardController.validateOwner(owner);
 		assertEquals(expected, isValid);
