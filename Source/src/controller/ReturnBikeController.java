@@ -1,6 +1,6 @@
 package controller;
 
-import subsystem.interbank.IInterbank;
+import subsystem.interbank.InterbankInterface;
 import subsystem.interbank.Interbank;
 import util.*;
 import entity.invoice.*;
@@ -42,7 +42,7 @@ public class ReturnBikeController {
 		System.out.println("Refund amount: " + refundAmount);
 		assert refundAmount > 0;
 
-		IInterbank interbank = new Interbank();
+		InterbankInterface interbank = new Interbank();
 		String respondCode = interbank.processTransaction(card, refundAmount, "Transaction for a refund",
 				daytime.format(returnTime), Constants.REFUND);
 		System.out.println("respond code: " + respondCode);

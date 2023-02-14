@@ -1,6 +1,6 @@
 package controller;
 
-import subsystem.interbank.IInterbank;
+import subsystem.interbank.InterbankInterface;
 import subsystem.interbank.Interbank;
 import util.*;
 
@@ -32,7 +32,7 @@ public class RentBikeController {
 
 		rentalCode = convertBikeCodeToRentalCode(bike.getBikeID());
 		int deposit = bike.calculateDeposit();
-		IInterbank interbank = new Interbank();
+		InterbankInterface interbank = new Interbank();
 		String code = interbank.processTransaction(card, deposit, "Transaction for a rent", daytime.format(date),
 				Constants.PAY);
 

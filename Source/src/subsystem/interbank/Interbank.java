@@ -4,7 +4,7 @@ import entity.card.*;
 import subsystem.interbank.api.ProcessTransaction;
 import subsystem.interbank.api.ResetTransaction;
 
-public class Interbank implements IInterbank {
+public class Interbank implements InterbankInterface {
 	/**
 	 * reset card
 	 */

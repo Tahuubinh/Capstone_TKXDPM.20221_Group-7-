@@ -192,7 +192,7 @@ public abstract class Bike {
 	 * Get Bike (similarly to a bike parser)
 	 * 
 	 * @param bike
-	 * @return bike with exact type 
+	 * @return bike with suitable type 
 	 */
 	public static final Bike getBike(ArrayList<String> bike) {
 		switch (bike.get(1)) {

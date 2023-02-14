@@ -2,7 +2,7 @@ package subsystem.barcodeconverter;
 
 import subsystem.barcodeconverter.api.BarcodeConvertion;
 
-public class BarcodeConverter implements IBarcodeConverter{
+public class BarcodeConverter implements BarcodeConverterInterface{
 	/**
 	 * convert barde to bike code
 	 */

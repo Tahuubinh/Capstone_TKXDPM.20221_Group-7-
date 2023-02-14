@@ -1,6 +1,6 @@
 package subsystem.barcodeconverter;
 
-public interface IBarcodeConverter {
+public interface BarcodeConverterInterface {
 	/**
 	 * Convert barcode into bike code
 	 * 
