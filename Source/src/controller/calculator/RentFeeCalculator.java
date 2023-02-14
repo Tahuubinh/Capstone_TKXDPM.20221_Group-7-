@@ -3,7 +3,7 @@ package controller.calculator;
 import controller.calculator.time.Time;
 import entity.bike.Bike;
 
-public class RentFee {
+public class RentFeeCalculator {
 	private CalculatorStrategy calculatorStrategy;
 	
 	public void setCalculatorStrategy(CalculatorStrategy calculatorStrategy) {
