@@ -7,7 +7,7 @@ public abstract class Card{
 	/**
 	 * static variable holds the card
 	 */
-	private static CreditCard card;
+	private static Card card;
 	/**
 	 * code of card
 	 */
